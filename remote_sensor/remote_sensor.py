@@ -64,8 +64,10 @@ def main():
         except RuntimeError as error:
             # Errors happen fairly often, DHT's are hard to read, just keep going
             logger.warn(error.args[0])
+            time.sleep(1)
+            continue
 
-        time.sleep(5.0)
+        time.sleep(2.0)
 
 
 def name():
